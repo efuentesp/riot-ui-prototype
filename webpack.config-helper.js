@@ -10,7 +10,7 @@ module.exports = options => {
   const webpackConfig = {
     devtool: options.devtool,
     entry: [
-      `webpack-dev-server/client?http://localhost:${options.port}`,
+      `webpack-dev-server/client`,
       "webpack/hot/dev-server",
       "./src/index"
     ],
@@ -104,6 +104,7 @@ module.exports = options => {
     );
 
     webpackConfig.devServer = {
+      host: "0.0.0.0",
       contentBase: "./dist",
       hot: true,
       port: options.port,
