@@ -10,7 +10,7 @@ module.exports = (options) => {
   const webpackConfig = {
     devtool: options.devtool,
     entry: [
-      `webpack-dev-server/client?http://localhost:${options.port}`,
+      `webpack-dev-server/client?http://dockerjaas.cloudapp.net:${options.port}`,
       'webpack/hot/dev-server',
       './src/index'
     ],
