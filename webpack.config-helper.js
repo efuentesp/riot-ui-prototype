@@ -104,12 +104,13 @@ module.exports = options => {
     );
 
     webpackConfig.devServer = {
-      host: "dockerjaas.cloudapp.net",
+      host: "0.0.0.0",
       contentBase: "./dist",
       hot: true,
       port: options.port,
       inline: true,
-      progress: true
+      progress: true,
+      disableHostCheck: true
     };
   }
 
