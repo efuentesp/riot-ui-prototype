@@ -1,7 +1,9 @@
 {
-  "ids": [{
+  "ids": [
+    {
       "id": "salidas",
-      "headers": [{
+      "headers": [
+        {
           "label": "Salida"
         },
         {
@@ -15,7 +17,8 @@
           "type": "currency"
         }
       ],
-      "rows": [{
+      "rows": [
+        {
           "id": "id1",
           "data": ["MEX 04:44 PM", "CUN 08:13 PM", "Directo", 5578]
         },
@@ -35,7 +38,8 @@
     },
     {
       "id": "llegadas",
-      "headers": [{
+      "headers": [
+        {
           "label": "Salida"
         },
         {
@@ -49,7 +53,8 @@
           "type": "currency"
         }
       ],
-      "rows": [{
+      "rows": [
+        {
           "id": "id1",
           "data": ["CUN 12:52 AM", "MEX 02:38 AM", "Directo", 3128]
         },
@@ -69,7 +74,8 @@
     },
     {
       "id": "ida",
-      "headers": [{
+      "headers": [
+        {
           "label": "Salida"
         },
         {
@@ -83,14 +89,17 @@
           "type": "currency"
         }
       ],
-      "rows": [{
-        "id": "id1",
-        "data": ["MEX 04:44 PM", "CUN 08:13 PM", "Directo", 5578]
-      }]
+      "rows": [
+        {
+          "id": "id1",
+          "data": ["MEX 04:44 PM", "CUN 08:13 PM", "Directo", 5578]
+        }
+      ]
     },
     {
       "id": "regreso",
-      "headers": [{
+      "headers": [
+        {
           "label": "Salida"
         },
         {
@@ -104,10 +113,12 @@
           "type": "currency"
         }
       ],
-      "rows": [{
-        "id": "id1",
-        "data": ["CUN 12:52 AM", "MEX 02:38 AM", "Directo", 3128]
-      }]
+      "rows": [
+        {
+          "id": "id1",
+          "data": ["CUN 12:52 AM", "MEX 02:38 AM", "Directo", 3128]
+        }
+      ]
     }
   ]
 }

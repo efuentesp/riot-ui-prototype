@@ -1,7 +1,9 @@
 {
-  "ids": [{
+  "ids": [
+    {
       "id": "mantenimientoClientes",
-      "headers": [{
+      "headers": [
+        {
           "label": "Número"
         },
         {
@@ -16,7 +18,8 @@
           "precision": 3
         }
       ],
-      "rows": [{
+      "rows": [
+        {
           "id": "E001",
           "data": ["E001", "Juan Pérez", "Bancario", 15000]
         },
@@ -33,9 +36,11 @@
           "data": ["E020", "Rodrigo Acevedo", "Bancario", 12500]
         }
       ],
-      "actions": [{
+      "actions": [
+        {
           "group": "Generales",
-          "actions": [{
+          "actions": [
+            {
               "label": "Pedidos",
               "link": "/pedido-admin/"
             },
@@ -47,7 +52,8 @@
         },
         {
           "group": "Cargos",
-          "actions": [{
+          "actions": [
+            {
               "label": "Generar cargos",
               "link": "/generar-cargos/"
             },
@@ -61,10 +67,13 @@
     },
     {
       "id": "WWW",
-      "headers": [{
-        "label": "Número de cliente"
-      }],
-      "rows": [{
+      "headers": [
+        {
+          "label": "Número de cliente"
+        }
+      ],
+      "rows": [
+        {
           "id": "E001",
           "data": ["E001"]
         },

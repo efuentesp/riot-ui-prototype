@@ -1,7 +1,9 @@
 {
-  "ids": [{
+  "ids": [
+    {
       "id": "cliente-resultados",
-      "headers": [{
+      "headers": [
+        {
           "label": "Número"
         },
         {
@@ -12,7 +14,8 @@
           "type": "currency"
         }
       ],
-      "rows": [{
+      "rows": [
+        {
           "id": "E001",
           "data": ["E001", "Ramiro Huerta Jimenez", 354000]
         },
@@ -21,22 +24,26 @@
           "data": ["E009", "Abarrotera San Juan, S.A. de C.V.", 2800000]
         }
       ],
-      "actions": [{
-        "group": "Generales",
-        "actions": [{
-            "label": "Pedidos",
-            "link": "/pedido-admin/"
-          },
-          {
-            "label": "Facturas",
-            "link": "/facturas-admin/"
-          }
-        ]
-      }]
+      "actions": [
+        {
+          "group": "Generales",
+          "actions": [
+            {
+              "label": "Pedidos",
+              "link": "/pedido-admin/"
+            },
+            {
+              "label": "Facturas",
+              "link": "/facturas-admin/"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "pedido-resultados",
-      "headers": [{
+      "headers": [
+        {
           "label": "Pedido"
         },
         {
@@ -51,7 +58,8 @@
           "type": "currency"
         }
       ],
-      "rows": [{
+      "rows": [
+        {
           "id": "P003",
           "data": [
             "P003",
@@ -70,13 +78,17 @@
           ]
         }
       ],
-      "actions": [{
-        "group": "Generales",
-        "actions": [{
-          "label": "Productos",
-          "link": "/producto-admin/"
-        }]
-      }]
+      "actions": [
+        {
+          "group": "Generales",
+          "actions": [
+            {
+              "label": "Productos",
+              "link": "/producto-admin/"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
