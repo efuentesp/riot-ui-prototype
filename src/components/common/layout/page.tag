@@ -1,6 +1,6 @@
 <page>
   <content>
-  <div class="page-title">
+  <div class="page-title backgroundMenuSolid">
     <div class="title_left">
       <h3>{ parent.opts.title }</h3>
     </div>

@@ -8,3 +8,237 @@
   height: 750px;
   overflow-y: scroll;
 }
+
+/******** LOGO MONTE DE PIEDAD ********/
+i.fa-montepiedad  {
+    content:"MontePiedad";
+    background-image:url('C:\\SOFTTEK1\\Sprints\\Sprint11\\EstiloMontePiedad\\riot-ui-prototype\\src\\img\\mtp.png');
+    background-repeat: no-repeat;
+    //background-size: 100px 100px;
+    width: 60px; //WIDTH of the icon
+    height: 60px; //HEIGHT of the icon
+    //display: inline-block;
+    //background-position:middle;
+    background-size:cover;
+    border: 1px solid #95002E;
+    vertical-align: middle;
+}
+
+/******** COLOR fa-bars del HEADER********/
+i.fa-bars  {
+    color: #FFFFFF;
+}
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ DEFINICION DE ESTILOS PARA EL HEADER -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+/******** BACKGROUND HEADER ********/
+.backgroundTopBar {
+    background: #95002E;
+    border: 1px solid #95002E;
+    height: 55px;
+}
+
+
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ DEFINICION DE ESTILOS PARA EL MENU -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+//-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+/******** BACKGROUND MENU ********/
+.backgroundMenu {
+    background: #FFFFFF;
+}
+
+.backgroundMenuOptions {
+    background: #FFFFFF;//#95002E;
+    color: lime;
+}
+
+.backgroundMenuTop {
+    background: #95002E;
+    height: 55px;
+}
+
+.backgroundMenuSolid {
+    background: #F6F6F6;//95002E;
+    border: 3px solid #F6F6F6;//95002E;
+    padding-left: 15px;
+    color: #95002E;
+}
+
+h3[id=menuItem]{
+  color: #541C59;
+}
+
+
+/******** DEFINE COLOR - SCROLL SUBMENU ********/
+.nav.side-menu > side-menu > li.current-page, .nav.side-menu > side-menu > li.active {
+    border-right: 5px solid #F6F6F6;
+}
+
+.nav-sm .nav.child_menu li.active, .nav-sm .nav.side-menu li.active-sm {
+    border-right: 5px solid #F6F6F6;
+}
+
+.nav-sm ul.nav.child_menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 210px;
+    z-index: 4000;
+    background: linear-gradient(#EB0029, #FFFFFF), #FFFFFF;
+    display: none;
+}
+
+/******** DEFINE COLOR - OPCION SUBMENU ********/
+.nav.side-menu  > side-menu li:hover > a > i, span[id~="lblOpcionMenu"] {
+    color: #541C59;
+}
+
+.nav.side-menu > side-menu > li.active > a {
+    color: #541C59;
+    text-shadow: rgba(84, 28, 89, 0.9) 45 5px 0;
+    // background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00bdf2), color-stop(100%, red)), lime;
+    // background: -webkit-linear-gradient(#334556, #2C4257), #2A3F54;
+    // background: -moz-linear-gradient(#334556, #2C4257), #2A3F54;
+    //background: -o-linear-gradient(#334556, #2C4257), #2A3F54;
+    background: #F6F6F6;//#FDB516;//linear-gradient(#EB0029, #FFFFFF), #FFFFFF;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+}
+
+
+/******** DEFINE COLOR - BEFORE ********/
+.nav-md ul.nav.child_menu {
+    background: #FFFFFF;
+    margin-top: 7px;
+}
+
+.nav-md ul.nav.child_menu li:before {
+    background: rgba(84, 28, 89, 1.0);
+    margin-top: 7px;
+}
+
+//---------------------------------
+.nav-md ul.nav.child_menu li:hover {
+  background: #FDB516;
+  color: #FFFFFF;
+}
+
+.nav-md ul.nav.child_menu li > a {
+    color: #541C59;
+    margin-top: 7px;
+}
+
+.nav-md ul.nav.child_menu li > a:hover {
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+//.nav.side-menu > side-menu > li.active
+.nav.side-menu > side-menu > li > a:hover {
+    background: #F6F6F6;//#FDB516;
+}
+
+//--------------------------------
+
+.nav.side-menu > side-menu > li > a, .nav.child_menu > menu-item > li > a {
+    color: #541C59;//95002E;
+    font-weight: 500;
+}
+
+/******** ESTILOS - DATAPICKER ********/
+.datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+    background-color: #FFFFFF;
+    //background-image: -moz-linear-gradient(to bottom, lime, yellow);
+    //background-image: -ms-linear-gradient(to bottom, lime, yellow);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EB0029), to(#FBD44C));
+    //background-image: -webkit-linear-gradient(to bottom, lime, yellow);
+    //background-image: -o-linear-gradient(to bottom, lime, yellow);
+    background-image: linear-gradient(to bottom, #EB0029, #EB0029);
+    //background-repeat: repeat-x;
+    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA400', endColorstr='#FBD44C', GradientType=0);
+    //border-color: red lime orange;
+    //border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    //filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #FFFFFF;
+    //text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.datepicker table tr td.day:hover, .datepicker table tr td.day.focused {
+    background: #F8D44C;
+    cursor: pointer;
+}
+
+.datepicker table tr td.active:hover, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.active, .datepicker table tr td.active:hover.active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active[disabled], .datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active.disabled:hover[disabled] {
+    background-color: #733B73;
+}
+
+
+/******** SE SOBRE ESCRIBE ESTILO DE BOTON TIPO LINK ********/
+.btn-link {
+  color: #96002F;
+}
+
+.btn-link:hover {
+  color: #FDB516;
+}
+
+
+.btn-danger {
+  background: #96002F;
+  border: 0px;
+}
+
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
+  background-color: #FDB516;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-danger.active.focus, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger:active.focus, .btn-danger:active:focus, .btn-danger:active:hover, .open>.dropdown-toggle.btn-danger.focus, .open>.dropdown-toggle.btn-danger:focus, .open>.dropdown-toggle.btn-danger:hover {
+  background: #FDB516;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-primary {
+  background: #96002F;
+  border: 0px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  background-color: #FDB516;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+  background: #FDB516;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+
+.btn-success {
+  background: #96002F;
+  border: 0px;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
+  background-color: #FDB516;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open>.dropdown-toggle.btn-success.focus, .open>.dropdown-toggle.btn-success:focus, .open>.dropdown-toggle.btn-success:hover {
+  background: #FDB516;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
