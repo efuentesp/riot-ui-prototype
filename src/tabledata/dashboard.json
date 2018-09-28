@@ -1,0 +1,33 @@
+{
+  "ids": [
+    {
+      "id": "campaign",
+      "headers": [
+        {
+          "label": "Nombre de la campaña"
+        },
+        {
+          "label": "Porcentaje (%)"
+        }
+      ],
+      "rows": [
+        {
+          "id": "facebook",
+          "data": ["Facebook", 40]
+        },
+        {
+          "id": "twitter",
+          "data": ["Twitter", 30]
+        },
+        {
+          "id": "instagram",
+          "data": ["Instagram", 20]
+        },
+        {
+          "id": "whatsapp",
+          "data": ["WhatsApp", 10]
+        }
+      ]
+    }
+  ]
+}

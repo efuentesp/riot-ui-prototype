@@ -59,6 +59,11 @@
 				<menu-item to="/mandatory-test/" label="Test"/>
 			</side-menu>
 		  </menu-section>
+		  <menu-section title="Dashboard">
+			<side-menu icon="fa fa-bar-chart" label="Dashboard">
+				<menu-item to="/dashboard/" label="Dashboard"/>
+			</side-menu>
+		  </menu-section>
 		</sidebar-menu>
 	</sidebar>
   <topbar></topbar>

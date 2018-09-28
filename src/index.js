@@ -42,6 +42,8 @@ import './components/common/form/actions.tag'
 import './components/common/form/action-group.tag'
 import './components/common/form/action-button.tag'
 import './components/common/form/option-matrix.tag'
+import './components/common/form/bar-graph.tag'
+import './components/common/form/counters.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 
@@ -110,6 +112,9 @@ import './components/app/clientetest/clientetest-form.tag'
 // Mandatory fields
 import './components/app/mandatory-fields/mandatory-test.tag'
 
+// Ejemplo dashboard
+import './components/app/dashboard/dashboard.tag'
+
 const msgs = require('json-loader!./default-messages.json')
 var msgJSON = JSON.stringify(msgs)
 localStorage.setItem('messages', msgJSON)
@@ -164,6 +169,7 @@ var routes = [
   { route: '/reservaciones-01-consultar/', tag: 'reservaciones-01-consultar' },
   { route: '/clientetest-add/', tag: 'clientetest-add' },
   { route: '/clientetest-admin/', tag: 'clientetest-admin' },
-  { route: '/mandatory-test/', tag: 'mandatory-test' }
+  { route: '/mandatory-test/', tag: 'mandatory-test' },
+  { route: '/dashboard/', tag: 'dashboard' }
 ]
 riot.mount('*', { routes: routes, options: { hashbang: true, params: { title: 'Login', username: 'Usuario', password: 'Contraseña', link: '//' } } })

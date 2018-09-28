@@ -82,6 +82,43 @@
 				</matrix-group>
 			 </matrix-rows>
 		</option-matrix>
+		
+		<counters>
+			<row>
+				<column size="col-md-4 col-xs-4">
+					<counter value=3000 title="Total Users" subtitle="From last Week" icon="fa-clock-o" type="positive" percentage="10"/>
+				</column>
+				<column size="col-md-4 col-xs-4">
+					<counter value=2000 title="Total Users" subtitle="From last Week" icon="fa-clock-o" type="neutral" percentage="10"/>
+				</column>
+				<column size="col-md-4 col-xs-4">
+					<counter value=4000 title="Total Users" subtitle="From last Week" icon="fa-clock-o" type="negative" percentage="10"/>
+				</column>
+			</row>
+		</counters>
+		
+		<bar-graph id="testChart">
+			<labels>
+				<label value="Enero"/>
+				<label value="Febrero"/>
+				<label value="Marzo"/>
+			</labels>
+			<datasets>
+				<dataset label="Ventas 2011" barcolor="#26B99A">
+					<data value=40/>
+					<data value=10/>
+					<data value=20/>
+				</dataset>
+				<dataset label="Ventas 2011" barcolor="#03586A">
+					<data value=30/>
+					<data value=60/>
+					<data value=80/>
+				</dataset>
+			</datasets>
+		</bar-graph>
+		
+		 
+		
     </formbox>
   </page>
 </clienteAgregar>
