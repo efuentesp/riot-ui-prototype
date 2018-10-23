@@ -70,30 +70,43 @@
       }
 
     this.removeRow = function(e){
+        
         this.rows.splice(e.item.index,1);
+        
 	  }
 
     this.addRow = function(e){
          if (this.rows.length < this.opts.maxrows) {
          var data=[]
          for (var r = 0; r < this.headers.length; r++){
-           if(document.getElementById(this.opts.id+r).nodeName==='SELECT-AUTO')
+           if(document.getElementById(this.opts.id+r).nodeName==='SELECT-AUTO'){
             data[r]=document.getElementById(this.opts.id+r).children[0].value;
+            document.getElementById(this.opts.id+r).children[0].value="";
+            }
            
-           if(document.getElementById(this.opts.id+r).nodeName==='SELECT-BOX')
+           if(document.getElementById(this.opts.id+r).nodeName==='SELECT-BOX'){
             data[r]=document.getElementById(this.opts.id+r).children[0].children[0].value;
+            document.getElementById(this.opts.id+r).children[0].children[0].value="";
+           }
 
-           if(document.getElementById(this.opts.id+r).nodeName==='INPUTBOX')
+           if(document.getElementById(this.opts.id+r).nodeName==='INPUTBOX'){
             data[r]=document.getElementById(this.opts.id+r).children[0].children[1].value;
+            document.getElementById(this.opts.id+r).children[0].children[1].value="";
+           }
 
-           if(document.getElementById(this.opts.id+r).nodeName==='OUTPUTTEXT')
+           if(document.getElementById(this.opts.id+r).nodeName==='OUTPUTTEXT') {
             data[r]=document.getElementById(this.opts.id+r).children[0].children[0].textContent;
+            //document.getElementById(this.opts.id+r).children[0].children[0].innerHTML="";
+           }
       
-           if(document.getElementById(this.opts.id+r).nodeName==='DATE-PICKER')
-            data[r]=document.getElementById(this.opts.id+r).children[0].children[0].children[0].value
+           if(document.getElementById(this.opts.id+r).nodeName==='DATE-PICKER') {
+            data[r]=document.getElementById(this.opts.id+r).children[0].children[0].children[0].value;
+            document.getElementById(this.opts.id+r).children[0].children[0].children[0].value="";
+           }
          }
          this.rows.push({"id":"1", "data":data });
          }
+         
     }
 
     </script>
