@@ -3,13 +3,11 @@
     <label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.placeholder }</label>
 	<input id={ "auto-" + opts.id  } class="form-control">
 	
-	
-	
 	<div id={ "opts-" + opts.id } style="display: none;">
 	    <yield/>
 		<option each={d , i in rows }  id={i} label={d}/>
 	</div>
-	
+	<span  class="help-block"></span>
 	<script>
       this.on('before-mount', function(){
        if (this.opts.data!=null) {

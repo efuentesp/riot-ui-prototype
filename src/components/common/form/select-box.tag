@@ -1,14 +1,11 @@
 <select-box>
 	<label if={ opts.required == 'true'} >{ opts.placeholder}<font color="red"> *</font></label>
     <label if={ opts.required == 'false' || ( ! opts.required && opts.placeholder ) } >{ opts.placeholder }</label>
-
-	
-	<div id={ opts.id }>
+	<div id={ opts.id } 
 		<yield/>
 		<option-box each={d , i in rows } id={i} label={d}/>
 	</div>
-	<br/>
-	
+    <span  class="help-block"></span>
     <script>
 	  if (this.opts.data!=null) {
       if (this.opts.fieldindex=='undefined')
@@ -24,6 +21,5 @@
 	     } 
 	  }
     </script>
-
 </select-box>
  

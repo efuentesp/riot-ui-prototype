@@ -71,7 +71,7 @@
 
     this.removeRow = function(e){
         this.rows.splice(e.item.index,1);
-	}
+	  }
 
     this.addRow = function(e){
          if (this.rows.length < this.opts.maxrows) {
@@ -81,10 +81,13 @@
             data[r]=document.getElementById(this.opts.id+r).children[0].value;
            
            if(document.getElementById(this.opts.id+r).nodeName==='SELECT-BOX')
-            data[r]=document.getElementById(this.opts.id+r).children[0].children[4].value;
+            data[r]=document.getElementById(this.opts.id+r).children[0].children[0].value;
 
            if(document.getElementById(this.opts.id+r).nodeName==='INPUTBOX')
             data[r]=document.getElementById(this.opts.id+r).children[0].children[1].value;
+
+           if(document.getElementById(this.opts.id+r).nodeName==='OUTPUTTEXT')
+            data[r]=document.getElementById(this.opts.id+r).children[0].children[0].textContent;
       
            if(document.getElementById(this.opts.id+r).nodeName==='DATE-PICKER')
             data[r]=document.getElementById(this.opts.id+r).children[0].children[0].children[0].value
