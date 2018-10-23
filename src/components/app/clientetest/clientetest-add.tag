@@ -28,7 +28,7 @@
 			<p hidden>4</p>
 			<div class="row">
 				<div class="col-md-4">
-				<select-box id="ClienteDir" type="select" placeholder="ClienteDir" data="clientedir-results" required=true fieldindex="1">
+				<select-box id="ClienteDir" type="select" placeholder="ClienteDir" data="mantenimientoClientesSimpleAdmin" required=true fieldindex="2">
 				</select-box>
 				</div>
 			</div>

@@ -1,46 +1,40 @@
 {
   "ids": [
     {
-      "id": "mantenimientoClientes",
+      "id": "mantenimientoClientesSimpleAdmin",
       "headers": [
         {
-          "label": "Número"
+          "label": "TextoNormal"
         },
         {
-          "label": "Nombre completo"
+          "label": "Teléfono",
+          "type": "phone"
         },
         {
           "label": "Tipo de crédito",
-          "type": "select"
+          "type": "select",
+          "data": ["Bancario", "Bancario 1", "Bancario 2", "Bancario 3"]
         },
         {
-          "label": "Crédito autorizado",
+          "label": "Crédito",
           "type": "currency",
           "precision": 3
         },
         {
           "label": "Fecha",
           "type": "date"
+        },
+        {
+          "label": "Autocomplete",
+          "type": "auto",
+          "data": ["algo ", "algo 1", "algo  2", "algo 3"]
+        },
+        {
+          "label": "Output Text",
+          "type": "output"
         }
       ],
-      "rows": [
-        {
-          "id": "E001",
-          "data": ["E001", "Juan Pérez", "Bancario", 15000, "19/10/2018"]
-        },
-        {
-          "id": "E009",
-          "data": ["E009", "Hortencia López", "Financiero", 18000, "19/10/2018"]
-        },
-        {
-          "id": "E010",
-          "data": ["E010", "Abril Guevara", "Financiero", 20000, "19/10/2018"]
-        },
-        {
-          "id": "E010",
-          "data": ["E020", "Rodrigo Acevedo", "Bancario", 12500, "19/10/2018"]
-        }
-      ],
+      "rows": [],
       "actions": [
         {
           "group": "Generales",

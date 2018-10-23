@@ -7,7 +7,9 @@
          <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/">
          </searchresults>
       </searchpanel>
-      <simple-admin id="mantenimientoClientes" maxrows="8"/>
+			<select-auto id="ClienteDir" type="select" placeholder="ClienteDir" data="mantenimientoClientesSimpleAdmin" required=true fieldindex="2"/>
+			
+      <simple-admin id="mantenimientoClientesSimpleAdmin" maxrows="8"/>
       <select-list id="mantenimientoClientes" fromtitle="Lista de Clientes" totitle="Lista de Clientes elegidos"/>
   
       <search-box id="searchboxsample" link="examplemodal" caption="Cliente" placeholder="Cliente Multi"/> 

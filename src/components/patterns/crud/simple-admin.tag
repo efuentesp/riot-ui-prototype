@@ -2,17 +2,25 @@
  <table class="table table-striped" id={opts.id}>
        <thead>
          <tr>
+           <th each={headers}> {label} </th>
+         </tr>
+         <tr>
            <th each={header, index in headers}>
-             <inputbox placeholder={header.label} id={this.opts.id+index}> </inputbox>
-           </th>
+             <inputbox if={header.type==null} type="default" placeholder={header.label} id={this.opts.id+index}> </inputbox>
+             <inputbox if={header.type=="email"} type="email" placeholder={header.label} id={this.opts.id+index}> </inputbox>
+             <inputbox if={header.type=="password"} type="password" placeholder={header.label} id={this.opts.id+index}> </inputbox>
+             <inputbox if={header.type=="phone"} type="phone" placeholder={header.label} id={this.opts.id+index}> </inputbox>
+             <inputbox if={header.type=="currency"} type="currency" placeholder={header.label} id={this.opts.id+index}> </inputbox>
+             <date-picker if={header.type=="date"} id={this.opts.id+index} type="date" value="" placeholder={header.label} disabled=false format="yyyy/mm/dd" mindate="2000-01-01" maxdate="2100-01-01" />
+             <select-box if={header.type=="select"} id={this.opts.id+index} type="select"  data={opts.id}  fieldindex="{index}"/>
+             <select-auto if={header.type=="auto"} id={this.opts.id+index} data={opts.id}  fieldindex="{index}"/>
+             <outputtext if={header.type=="output"} id={this.opts.id+index}  label={header.label}/>
+             </th>
            <th>
-              <a href="/cliente-administrar/" onclick={addRow} class="btn btn-default btn-sm btn-th">
+              <a onclick={addRow} class="btn btn-default btn-sm btn-th">
                 <i class="fa fa-plus"></i>
               </a>
            </th>
-         </tr>
-         <tr>
-           <th each={headers}> {label} </th>
          </tr>
        </thead>
        <tbody>
@@ -21,7 +29,7 @@
              {d}
            </td>
            <td>
-               <a href="/cliente-administrar/" onclick={removeRow} class="btn btn-default btn-sm">
+               <a onclick={removeRow} class="btn btn-default btn-sm">
                  <i class="fa fa-trash"></i>
                </a>
            </td>
@@ -69,7 +77,17 @@
          if (this.rows.length < this.opts.maxrows) {
          var data=[]
          for (var r = 0; r < this.headers.length; r++){
-           data[r] = document.getElementById(this.opts.id+r).children[0].children[1].value;
+           if(document.getElementById(this.opts.id+r).nodeName==='SELECT-AUTO')
+            data[r]=document.getElementById(this.opts.id+r).children[0].value;
+           
+           if(document.getElementById(this.opts.id+r).nodeName==='SELECT-BOX')
+            data[r]=document.getElementById(this.opts.id+r).children[0].children[4].value;
+
+           if(document.getElementById(this.opts.id+r).nodeName==='INPUTBOX')
+            data[r]=document.getElementById(this.opts.id+r).children[0].children[1].value;
+      
+           if(document.getElementById(this.opts.id+r).nodeName==='DATE-PICKER')
+            data[r]=document.getElementById(this.opts.id+r).children[0].children[0].children[0].value
          }
          this.rows.push({"id":"1", "data":data });
          }
