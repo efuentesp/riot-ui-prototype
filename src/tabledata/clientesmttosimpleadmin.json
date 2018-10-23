@@ -4,34 +4,41 @@
       "id": "mantenimientoClientesSimpleAdmin",
       "headers": [
         {
-          "label": "TextoNormal"
+          "label": "TextoNormal",
+          "required": "true"
         },
         {
           "label": "Teléfono",
-          "type": "phone"
+          "type": "phone",
+          "required": "true"
         },
         {
           "label": "Tipo de crédito",
           "type": "select",
-          "data": ["Bancario", "Bancario 1", "Bancario 2", "Bancario 3"]
+          "data": ["Bancario", "Bancario 1", "Bancario 2", "Bancario 3"],
+          "required": "true"
         },
         {
           "label": "Crédito",
           "type": "currency",
-          "precision": 3
+          "precision": 3,
+          "required": "true"
         },
         {
           "label": "Fecha",
-          "type": "date"
+          "type": "date",
+          "required": "false"
         },
         {
           "label": "Autocomplete",
           "type": "auto",
-          "data": ["algo ", "algo 1", "algo  2", "algo 3"]
+          "data": ["algo ", "algo 1", "algo  2", "algo 3"],
+          "required": "true"
         },
         {
           "label": "Output Text",
-          "type": "output"
+          "type": "output",
+          "required": "true"
         }
       ],
       "rows": [],
