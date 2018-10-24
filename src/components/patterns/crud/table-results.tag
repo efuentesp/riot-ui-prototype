@@ -19,10 +19,12 @@
         </td>
         <td if={opts.action=="select-multi" } class="a-center ">
           <input type="checkbox" class="flat" name="table_records">
-
         </td>
         <td each={d , i in data }>
-          {d}
+          <virtual if={!d.toString().startsWith("http")}>
+            {d}
+          </virtual>
+          <img if={d.toString().startsWith("http")} src="{d}"  width="{opts.imgwidth}" height="{opts.imgheight}" /> 
         </td>
         <td>
           <edit-button if={opts.edit} to={ opts.edit }></edit-button>
@@ -50,6 +52,10 @@
     next="Siguiente" />
 
   <script>
+    if (this.opts.imgwidth==null)
+        this.opts.imgwidth =15;
+    if (this.opts.imgheight==null)
+        this.opts.imgheight=15;
     this.headers = JSON.parse(localStorage.getItem('header_' + this.opts.id));
     this.rows = JSON.parse(localStorage.getItem('rows_' + this.opts.id));
     for (var i = 0; i < this.rows.length; i++) {
@@ -84,5 +90,6 @@
     this.goToRef = function (e) {
       toRef(e.item.link);
     };
+    
   </script>
 </table-results>

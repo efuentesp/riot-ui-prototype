@@ -16,7 +16,7 @@
           "label": "Tipo de crédito",
           "type": "select",
           "data": ["Bancario", "Bancario 1", "Bancario 2", "Bancario 3"],
-          "required": "true"
+          "required": "false"
         },
         {
           "label": "Crédito",
@@ -32,8 +32,7 @@
         {
           "label": "Autocomplete",
           "type": "auto",
-          "data": ["algo ", "algo 1", "algo  2", "algo 3"],
-          "required": "true"
+          "data": ["algo ", "algo 1", "algo  2", "algo 3"]
         },
         {
           "label": "Output Text",

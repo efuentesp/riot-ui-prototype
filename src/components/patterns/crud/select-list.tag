@@ -16,7 +16,10 @@
 			 <input type="checkbox" class="flat" name="ts-ckeck"> { opts.label }
            </td>
            <td each={d , i in row.data }>
+            <virtual if={!d.toString().startsWith("http")}>
              {d}
+            </virtual>
+            <img if={d.toString().startsWith("http")} src="{d}" width="{opts.imgwidth}" height="{opts.imgheight}" /> 
            </td>
        </tr>
        </tbody>
@@ -53,6 +56,11 @@
    </div>
  </div>
      <script>
+      if (this.opts.imgwidth==null)
+        this.opts.imgwidth =15;
+      if (this.opts.imgheight==null)
+        this.opts.imgheight=15;
+
       this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.id));
       this.rows       = JSON.parse(localStorage.getItem('rows_'+ this.opts.id));
       for (var i=0; i < this.rows.length; i++)

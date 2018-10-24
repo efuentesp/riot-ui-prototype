@@ -25,5 +25,5 @@
 
 
 <searchresults>
-	<table-results pagination={opts.pagination} id={opts.id} edit={opts.edit} delete={opts.delete}/>
+	<table-results pagination={opts.pagination} id={opts.id} edit={opts.edit} delete={opts.delete} imgwidth={opts.imgwidth} imgheight={opts.imgheight}/>
 </searchresults>

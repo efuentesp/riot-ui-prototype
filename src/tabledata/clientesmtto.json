@@ -4,7 +4,7 @@
       "id": "mantenimientoClientes",
       "headers": [
         {
-          "label": "Número"
+          "label": "Imagen"
         },
         {
           "label": "Nombre completo"
@@ -26,19 +26,43 @@
       "rows": [
         {
           "id": "E001",
-          "data": ["E001", "Juan Pérez", "Bancario", 15000, "19/10/2018"]
+          "data": [
+            "https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+            "Juan Pérez",
+            "Bancario",
+            15000,
+            "19/10/2018"
+          ]
         },
         {
           "id": "E009",
-          "data": ["E009", "Hortencia López", "Financiero", 18000, "19/10/2018"]
+          "data": [
+            "https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+            "Hortencia López",
+            "Financiero",
+            18000,
+            "19/10/2018"
+          ]
         },
         {
           "id": "E010",
-          "data": ["E010", "Abril Guevara", "Financiero", 20000, "19/10/2018"]
+          "data": [
+            "https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+            "https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+            "Financiero",
+            20000,
+            "19/10/2018"
+          ]
         },
         {
-          "id": "E010",
-          "data": ["E020", "Rodrigo Acevedo", "Bancario", 12500, "19/10/2018"]
+          "id": "E011",
+          "data": [
+            "https://fakeimg.pl/150x150/?text=Picture&font=lobster",
+            "Rodrigo Acevedo",
+            "Bancario",
+            12500,
+            "19/10/2018"
+          ]
         }
       ],
       "actions": [

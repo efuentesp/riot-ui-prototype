@@ -4,13 +4,13 @@
          <searchcriteria>
              <search id="criterioBusqueda" type="text" caption="Buscar" placeholder="Criterio de Búsqueda"> </search>
          </searchcriteria>
-         <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/">
+         <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/" imgwidth="15">
          </searchresults>
       </searchpanel>
 			<select-auto id="ClienteDir" type="select" placeholder="ClienteDir" data="mantenimientoClientesSimpleAdmin" required=true fieldindex="2"/>
 			
       <simple-admin id="mantenimientoClientesSimpleAdmin" maxrows="8"/>
-      <select-list id="mantenimientoClientes" fromtitle="Lista de Clientes" totitle="Lista de Clientes elegidos"/>
+      <select-list id="mantenimientoClientes" fromtitle="Lista de Clientes" totitle="Lista de Clientes elegidos" imgheight="20" imgwidth="25"/>
   
       <search-box id="searchboxsample" link="examplemodal" caption="Cliente" placeholder="Cliente Multi"/> 
       <modal-box id="examplemodal"  data="mantenimientoClientes" title="Seleccionar Cliente Modal Select-Multi" action="select-multi" link="searchboxsample"/>
