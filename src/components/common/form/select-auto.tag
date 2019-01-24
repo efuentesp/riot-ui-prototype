@@ -1,6 +1,6 @@
 <select-auto>
 	<label if={ opts.required == 'true'}   for={opts.type}>{ opts.placeholder }<font color="red"> *</font></label>
-    <label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.placeholder }</label>
+    <label if={ opts.required == 'false' || ( ! opts.required && opts.placeholder ) } for={opts.type}>{ opts.placeholder }</label>
 	<input id={ "auto-" + opts.id  } class="form-control">
 	
 	<div id={ "opts-" + opts.id } style="display: none;">
