@@ -65,10 +65,29 @@
           return buttons[6].button.class;
           break;
 		case 'custom':
-          return buttons[7].button.class;
+		  var cls = "btn";
+		  switch (opts.type) {
+			case 'link':
+			  cls = cls + " btn-link";
+			  break;
+		  }
+		  switch (opts.state) {
+			case 'default':
+			  cls = cls + " btn-default";
+			  break;
+			case 'primary':
+			  cls = cls + " btn-primary";
+			  break;
+			case 'danger':
+			  cls = cls + " btn-danger";
+			  break;
+			default:
+			  cls = cls + " btn-default";
+		  }
+		  return cls;
           break;
         default:
-          return buttons[3].button.class;
+          return buttons[7].button.class;
       }
     }
 
