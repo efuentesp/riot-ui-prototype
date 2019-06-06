@@ -44,6 +44,7 @@ import './components/common/form/action-button.tag'
 import './components/common/form/option-matrix.tag'
 import './components/common/form/bar-graph.tag'
 import './components/common/form/counters.tag'
+import './components/common/form/alert.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 

@@ -117,6 +117,12 @@
 			</datasets>
 		</bar-graph>
 		
+		
+		<submit-button id="myalertbutton" action="create" alert="myalert"/>
+				<alert id="myalert" type="success" title="Registro aceptado" message="El registro ha sido aceptado" to="/cliente-administrar/"/>
+				
+				<submit-button id="myalertbutton2" action="delete" alert="myalert2"/>
+				<alert id="myalert2" type="warning" title="Alerta" message="¿Está seguro de guardar el registro?" iscancel=true to="/cliente-administrar/"/>
 		 
 		
     </formbox>
