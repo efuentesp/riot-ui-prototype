@@ -22,7 +22,7 @@
         </td>
         <td each={d , i in data }>
           <virtual if={!d.toString().startsWith("http")}>
-            {d}
+            <raw html="{d}"></raw>
           </virtual>
           <img if={d.toString().startsWith("http")} src="{d}"  width="{opts.imgwidth}" height="{opts.imgheight}" /> 
         </td>
