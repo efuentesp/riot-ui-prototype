@@ -144,6 +144,14 @@ for (var j = 0; j < json.files.length; j++) {
     }
   }
 }
+
+// Files
+const softtekIconPath = require('./img/Softtek_1ink_SMALL.jpg')
+localStorage.setItem('softtekIcon', softtekIconPath)
+
+const pdfFirmaPatronPath = require('./img/FirmaPatron.pdf')
+localStorage.setItem('firmaPatronPdf', pdfFirmaPatronPath)
+
 require('riot-routehandler')
 var routes = [
   { route: '/', tag: 'login' },

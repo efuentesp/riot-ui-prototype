@@ -55,7 +55,7 @@ module.exports = options => {
           }
         },
         {
-          test: /\.(png|jpg|gif|svg)$/,
+          test: /\.(png|jpg|gif|svg|pdf)$/,
           loader: "url-loader"
         },
         {

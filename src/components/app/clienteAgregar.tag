@@ -124,7 +124,9 @@
 				<submit-button id="myalertbutton2" action="delete" alert="myalert2"/>
 				<alert id="myalert2" type="warning" title="Alerta" message="¿Está seguro de guardar el registro?" iscancel=true to="/cliente-administrar/"/>
 		 
-		
+			<img src={ localStorage.getItem("softtekIcon") }/>
+			<object class="internal" data={ localStorage.getItem("firmaPatronPdf") }> </object>
     </formbox>
   </page>
+  
 </clienteAgregar>
