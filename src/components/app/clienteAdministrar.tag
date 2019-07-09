@@ -18,6 +18,9 @@
       <search-box id="searchboxsample2" link="examplemodal2" caption="Cliente2" placeholder="Cliente One"/> 
       <modal-box id="examplemodal2"  data="mantenimientoClientes" title="Seleccionar Cliente Modal Select-One" action="select-one" pagination="true" link="searchboxsample2"/>
       
+	  <date-time-picker  id="datetime1" label="Fecha1"/>
+	  <checkbox label="true" id="id1" checked="true"/>
+	  <checkbox label="false" id="id2" checked="false"/>
 	  <tablist id="tablist_example">
 			   <tabitem id="tab_content1"  label="Home">
 				  <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
@@ -39,8 +42,8 @@
 					</row>
 				 </panel>
 			   </tabitem>
-		</tablist>
-
-	  
+		</tablist>	
+		<time-picker id="timepicker" label="Hora"/>
+	    
   </page>
 </clienteAdministrar>

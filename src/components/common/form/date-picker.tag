@@ -26,7 +26,7 @@
 		this.on('mount', function() {
 			setTimeout(function(){
 				setDatePicker();
-			}, 300);
+			}, 1000);
 		})
 
 		// This is when page is reloaded and refreshed
