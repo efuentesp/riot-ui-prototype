@@ -1,8 +1,8 @@
 <tablist>
               <div class="x_panel">
                   <div class="x_content">
-                    <div class="" role="tabpanel" data-example-id="togglable-tabs">
-                      <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                    <div if={ opts.orientation == 'horizontal' || opts.orientation == null} class="" role="tabpanel" data-example-id="togglable-tabs">
+					  <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                         <li role="presentation" class={id.clas} each={id, index in ids}>
                           <a href="#{id.id}" id="{id.id}-tab" role="tab" data-toggle="tab" aria-expanded="false" index={id.index} onclick={changeclass} >
                             {id.label}
@@ -12,6 +12,22 @@
                       <div id={tabcontainerid} class="tab-content">
                         <yield/>
                       </div>
+                    </div>
+					<div if={ opts.orientation == 'vertical' } class="" role="tabpanel" data-example-id="togglable-tabs">
+						<div class="col-md-3">
+						  <ul id="myTab" class="nav nav-tabs tabs-left" role="tablist">
+							<li role="presentation" class={id.clas} each={id, index in ids}>
+							  <a href="#{id.id}" id="{id.id}-tab" role="tab" data-toggle="tab" aria-expanded="false" index={id.index} onclick={changeclass} >
+								{id.label}
+							  </a>
+							</li>
+						  </ul>
+						 </div>
+						<div class="col-md-9">
+						  <div id={tabcontainerid} class="tab-content">
+							<yield/>
+						  </div>
+						</div>
                     </div>
                   </div>
               </div>

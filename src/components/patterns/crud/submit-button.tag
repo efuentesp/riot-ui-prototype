@@ -1,9 +1,14 @@
 <submit-button>
-  <a href={opts.to} class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
+  <a onclick={ redirectPage } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
 	<script>
 		this.goToRef = function(){
 			toRef(opts.to);
 		};
+		
+		this.redirectPage = function(){
+			window.location.href = "./#!" + opts.to
+			window-location.reload()
+		}
 		
 		this.on('mount', function(){
 			if (opts.alert && opts.id){
