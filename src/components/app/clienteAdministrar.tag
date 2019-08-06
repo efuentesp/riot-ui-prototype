@@ -44,30 +44,72 @@
 			   </tabitem>
 		</tablist>	
 		<time-picker id="timepicker" label="Hora"/>
-		<label> Ejemplo de stk-input Stencil js</label>
+		<panel label="Ejemplos de stk-input de Stenciljs">
+		<action-button id="action-button"  label="Mostrar contenido inicial del correo."/>
+		</br>
+		<label>Correo con validación</label>
 	    <stk-input
                   type="email2"
                   default-value="a@hotmail.com"
-                  value=""
+                  value="a@hotmail.com"
                   min=7
                   max=17
                   placeholder="Email..."
 				  id="stk-input1"
         ></stk-input>
+        <label>Texto libre</label>
+		<stk-input
+                  default-value=""
+                  value="ABCDE"
+                  placeholder="Placeholder..."
+                  allow-clear
+                  id="stk-input0"
+        ></stk-input>
+		<label>Currency</label>
+		<stk-input
+                  type="currency"
+                  default-value="1"
+                  value="10"
+                  step="0.1"
+                  min=1
+                  max=10
+                  placeholder="Currency..."
+				  id="stk-input1"
+        ></stk-input>
+		<label>Telefono</label>
+        <stk-input
+                  type="phone"
+                  default-value="+52 1 999 99 99"
+                  value=""
+                  placeholder="Phone..."
+				  id="stk-input2"
+        ></stk-input>
+		
+		</panel>
   </page>
 </clienteAdministrar>
 <script>
+this.on('mount', function(){
   //Ejemplo de como acceder al atributo min del componente de Stenciljs
  function aler() {
   var el = document.getElementById("stk-input1"); 
-  alert("alerta "+el.min.toString())
+  alert("Contenido del valor minimo del correo : "+el.min.toString())
+ }
+
+ function aler2() {
+  var el = document.getElementById("stk-input1"); 
+  alert("Contenido inicial del correo : "+el.value.toString())
  }
  
  function load() { 
    var el = document.getElementById("stk-input1"); 
    el.addEventListener("click", aler, false); 
- } 
 
- document.addEventListener("DOMContentLoaded", load, false);
+   var e2 = document.getElementById("action-button"); 
+   e2.addEventListener("click", aler2, false); 
+ }
+
+ document.addEventListener("mouseover", load);
+});
 </script>
 

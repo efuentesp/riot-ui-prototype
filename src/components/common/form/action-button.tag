@@ -1,5 +1,5 @@
 <action-button>
-	<a href={ opts.link } class="btn btn-app" id={ opts.id } >
+	<a href={ opts.link } class="btn btn-app" id={ opts.id }>
 		<i class={ opts.icon }></i> { opts.label }
 	</a>
 	
@@ -8,5 +8,4 @@
 			toRef(opts.to);
 		};
 	</script>
-	
 </action-button>
