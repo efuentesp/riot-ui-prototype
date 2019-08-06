@@ -45,7 +45,7 @@
 		</tablist>	
 		<time-picker id="timepicker" label="Hora"/>
 		<panel label="Ejemplos de stk-input de Stenciljs">
-		<action-button id="action-button"  label="Mostrar contenido inicial del correo."/>
+		<action-button icon="fa fa-info" id="action-button"  label="Boton de Riot mostrar contenido inicial del correo."/>
 		</br>
 		<label>Correo con validación</label>
 	    <stk-input
@@ -102,8 +102,8 @@ this.on('mount', function(){
  }
  
  function load() { 
-   var el = document.getElementById("stk-input1"); 
-   el.addEventListener("click", aler, false); 
+   //var el = document.getElementById("stk-input1"); 
+   //el.addEventListener("click", aler, false); 
 
    var e2 = document.getElementById("action-button"); 
    e2.addEventListener("click", aler2, false); 
