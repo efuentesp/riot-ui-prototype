@@ -44,6 +44,30 @@
 			   </tabitem>
 		</tablist>	
 		<time-picker id="timepicker" label="Hora"/>
-	    
+		<label> Ejemplo de stk-input Stencil js</label>
+	    <stk-input
+                  type="email2"
+                  default-value="a@hotmail.com"
+                  value=""
+                  min=7
+                  max=17
+                  placeholder="Email..."
+				  id="stk-input1"
+        ></stk-input>
   </page>
 </clienteAdministrar>
+<script>
+  //Ejemplo de como acceder al atributo min del componente de Stenciljs
+ function aler() {
+  var el = document.getElementById("stk-input1"); 
+  alert("alerta "+el.min.toString())
+ }
+ 
+ function load() { 
+   var el = document.getElementById("stk-input1"); 
+   el.addEventListener("click", aler, false); 
+ } 
+
+ document.addEventListener("DOMContentLoaded", load, false);
+</script>
+
