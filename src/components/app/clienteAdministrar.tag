@@ -45,71 +45,125 @@
 		</tablist>	
 		<time-picker id="timepicker" label="Hora"/>
 		<panel label="Ejemplos de stk-input de Stenciljs">
-		<action-button icon="fa fa-info" id="action-button"  label="Boton de Riot mostrar contenido inicial del correo."/>
-		</br>
-		<label>Correo con validación</label>
-	    <stk-input
-                  type="email2"
-                  default-value="a@hotmail.com"
-                  value="a@hotmail.com"
-                  min=7
-                  max=17
-                  placeholder="Email..."
-				  id="stk-input1"
-        ></stk-input>
-        <label>Texto libre</label>
-		<stk-input
-                  default-value=""
-                  value="ABCDE"
-                  placeholder="Placeholder..."
-                  allow-clear
-                  id="stk-input0"
-        ></stk-input>
-		<label>Currency</label>
-		<stk-input
-                  type="currency"
-                  default-value="1"
-                  value="10"
-                  step="0.1"
-                  min=1
-                  max=10
-                  placeholder="Currency..."
-				  id="stk-input1"
-        ></stk-input>
-		<label>Telefono</label>
-        <stk-input
-                  type="phone"
-                  default-value="+52 1 999 99 99"
-                  value=""
-                  placeholder="Phone..."
-				  id="stk-input2"
-        ></stk-input>
-		
+		  <h1>Softtek Web Components</h1>
+      <br/>
+      <stk-input
+        type="text"
+        default-value=""
+        value="ABCDE"
+        placeholder="Placeholder..."
+        allow-clear
+        minsize=2
+        maxsize=10
+        required
+        label="Input Texto"
+        orientation="horizontal"
+      ></stk-input>
+      </br>
+      <stk-input
+        type="text"
+        default-value=""
+        value="ABCDE"
+        placeholder="Placeholder..."
+        allow-clear
+        minsize=2
+        maxsize=12
+        required
+        label="Input Texto Vertical (default)"
+      ></stk-input>
+      </br>
+      <stk-input
+        type="email"
+        default-value="a@hotmail.com"
+        value="a@hotmail.com"
+        min=7
+        max=16
+        required=true
+        allow-clear
+        placeholder="Email..."
+        label="Intput Email"
+        orientation="horizontal"
+        id="stk-input1"
+      ></stk-input>
+      <span>
+        <label> Botón de Riot para mostrar el contenido inicial del input email de Stenciljs.</label>
+        <action-button icon="fa fa-info" id="action-button"  label="Show email value"/>
+      </span>
+      </br>
+      <stk-input
+        label="Input Moneda"
+        type="currency"
+        default-value="10.0"
+        value="10.0"
+        step=".01"
+        min=2
+        max=11
+        allow-clear
+        placeholder="Currency..."
+      ></stk-input>
+      </br>
+      <stk-input
+        label="Input Entero"
+        type="integer"
+        default-value="13"
+        value="13"
+        step="1"
+        min=3
+        max=14
+        allow-clear
+        placeholder="Entero..."
+      ></stk-input>
+      </br>
+      <stk-input
+        label="Input Teléfono"
+        type="phone"
+        default-value="+52 1 999 99 99"
+        value=""
+        minsize=10
+        maxsize=20
+        allow-clear
+        placeholder="Phone..."
+      ></stk-input>
+      </br>
+      <stk-input
+        label="Input Deshabilitado"
+        default-value="Disabled"
+        placeholder="Placeholder..."
+        allow-clear
+        disabled
+      ></stk-input>
+      </br>
+      <stk-input
+        label="Input Contraseña"
+        type="password"
+        default-value="123"
+        placeholder="Password"
+        minsize=1
+        maxsize=10
+        allow-clear
+        required
+      ></stk-input>
+      </br>
+      <stk-input
+        label="Area de Texto"
+        type="text-area"
+        default-value="Texto"
+        placeholder="Text Area"
+        rows=3
+      ></stk-input>
+
 		</panel>
   </page>
 </clienteAdministrar>
 <script>
-this.on('mount', function(){
-  //Ejemplo de como acceder al atributo min del componente de Stenciljs
- function aler() {
-  var el = document.getElementById("stk-input1"); 
-  alert("Contenido del valor minimo del correo : "+el.min.toString())
- }
-
- function aler2() {
-  var el = document.getElementById("stk-input1"); 
-  alert("Contenido inicial del correo : "+el.value.toString())
- }
+  //Ejemplo de como acceder al atributo value del componente de Stenciljs
  
- function load() { 
-   //var el = document.getElementById("stk-input1"); 
-   //el.addEventListener("click", aler, false); 
-
-   var e2 = document.getElementById("action-button"); 
-   e2.addEventListener("click", aler2, false); 
- }
-
- document.addEventListener("mouseover", load);
-});
+  function alerta() {
+   var el = document.getElementById("stk-input1"); 
+   alert("Contenido inicial del correo : "+el.value.toString())
+  }
+ 
+  var e2 = document.getElementById("action-button"); 
+  e2.addEventListener("click", alerta, false); 
 </script>
 
