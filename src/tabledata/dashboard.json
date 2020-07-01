@@ -8,24 +8,75 @@
         },
         {
           "label": "Porcentaje (%)"
+        },
+        {
+          "id": "ACTIVO",
+          "label": "ACTIVO",
+          "type": "simple-selection"
+        },
+        {
+          "label": "Porcentaje (%)"
+        },
+        {
+          "id": "PENDIENTE",
+          "label": "PENDIENTE",
+          "type": "simple-selection"
+        },
+        {
+          "label": "Prueba"
+        },
+        {
+          "id": "GARANTIA",
+          "label": "APLICA GARANTÍA",
+          "type": "multiple-selection"
+        },
+        {
+          "label": "Importe total MN",
+          "type": "currency",
+          "precision": 3
+        },
+        {
+          "id": "TipoPersona",
+          "label": "Tipo persona",
+          "type": "combo-selection",
+          "opts": [
+            {"id": "FISICA", "label": "FISICA"},
+            {"id": "GOBIERNO", "label": "GOBIERNO"},
+            {"id": "MORAL", "label": "MORAL"}
+          ]
+        },
+        {
+          "id": "DOCUMENTOS",
+          "label": "¿Documentos completos?",
+          "type": "multiple-selection"
+        },
+        {
+          "id": "FormaManejo",
+          "label": "Forma manejo",
+          "type": "combo-selection",
+          "opts": [
+            {"id": "DISCRESTR", "label":"DISCRECIONAL RESTRINGIDO"},
+            {"id": "NODISCR", "label": "NO DISCRECIONAL"},
+            {"id": "SINMANEJO", "label": "SIN MANEJO DE INVERSION"}
+          ]
         }
       ],
       "rows": [
         {
           "id": "facebook",
-          "data": ["Facebook", 40]
+          "data": ["Facebook", 40, 50, "Texto de prueba", "50000"]
         },
         {
           "id": "twitter",
-          "data": ["Twitter", 30]
+          "data": ["Twitter", 30, 70, "Texto de prueba", "50000"]
         },
         {
           "id": "instagram",
-          "data": ["Instagram", 20]
+          "data": ["Instagram", 20, 90, "Texto de prueba", "50000"]
         },
         {
           "id": "whatsapp",
-          "data": ["WhatsApp", 10]
+          "data": ["WhatsApp", 10, 90, "Texto de prueba", "50000"]
         }
       ]
     }
