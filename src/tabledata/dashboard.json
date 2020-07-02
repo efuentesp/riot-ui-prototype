@@ -4,79 +4,227 @@
       "id": "campaign",
       "headers": [
         {
-          "label": "Nombre de la campaña"
+          "id": "TipoPersona2",
+          "label": "Tipo persona 2",
+          "type": "combo-selection",
+          "opts": [
+            { "id": "FISICA", "label": "FISICA" },
+            { "id": "GOBIERNO", "label": "GOBIERNO" },
+            { "id": "MORAL", "label": "MORAL" }
+          ]
         },
         {
-          "label": "Porcentaje (%)"
+          "id": "Accionnnn",
+          "label": "Acciónnnn",
+          "type": "combo-selection",
+          "required": "true",
+          "opts": [
+            { "id": "CANCELAR", "label": "CANCELAR" },
+            { "id": "AUTORIZAR", "label": "CANCELAR" },
+            { "id": "RECHAZAR", "label": "CANCELAR" }
+          ]
         },
         {
-          "id": "ACTIVO",
-          "label": "ACTIVO",
-          "type": "simple-selection"
+          "label": "Motivo",
+          "type": "select",
+          "required": "false",
+          "data": [
+            "Occaecati explicabo facilis. Repellendus quaerat saepe voluptates aut reiciendis. Voluptate earum repellat occaecati placeat nisi minima ex. Nemo quaerat aliquid vitae totam necessitatibus aut. In magni dignissimos autem autem sunt mollitia sit.",
+            "Quod ut dolorem sed. Accusamus deleniti sed dicta. Atque nesciunt aperiam est non.",
+            "Esse hic facere. Sint laborum ut ab ratione sit ipsum adipisci. Esse cupiditate sequi repudiandae quisquam voluptatem assumenda. Porro quo adipisci.",
+            "Perspiciatis rerum magnam atque totam nisi. Quaerat nobis a. Et sapiente culpa quis ut. Magnam iure officiis excepturi praesentium nulla.",
+            "Ex aspernatur et aut necessitatibus vel accusamus. Non explicabo amet quis assumenda. Vel repudiandae laboriosam dicta odio."
+          ]
         },
         {
-          "label": "Porcentaje (%)"
+          "label": "Folio",
+          "required": "true"
         },
         {
-          "id": "PENDIENTE",
-          "label": "PENDIENTE",
-          "type": "simple-selection"
+          "label": "Categoría",
+          "type": "select",
+          "required": "false",
+          "data": [
+            "Est voluptatibus deleniti necessitatibus cumque eius.",
+            "Consequatur veritatis eligendi autem quidem maiores.",
+            "Quae exercitationem accusantium voluptates.",
+            "Ut dolorem numquam ullam voluptas aut.",
+            "Nihil illo cum."
+          ]
         },
         {
-          "label": "Prueba"
+          "label": "Proveedor",
+          "type": "select",
+          "required": "true",
+          "data": ["1,224", "3,963", "460", "8,762", "995"]
         },
         {
-          "id": "GARANTIA",
-          "label": "APLICA GARANTÍA",
-          "type": "multiple-selection"
+          "label": "Total pendiente",
+          "required": "true"
         },
         {
-          "label": "Importe total MN",
-          "type": "currency",
-          "precision": 3
+          "label": "Solicitante",
+          "type": "select",
+          "required": "false",
+          "data": [
+            "Esse quod qui ratione ut voluptate aperiam ullam.",
+            "Consectetur dicta ad culpa atque fugiat.",
+            "Molestiae quis ipsa eveniet distinctio.",
+            "Dolor deserunt omnis.",
+            "Et voluptatum aliquam."
+          ]
         },
         {
           "id": "TipoPersona",
           "label": "Tipo persona",
           "type": "combo-selection",
           "opts": [
-            {"id": "FISICA", "label": "FISICA"},
-            {"id": "GOBIERNO", "label": "GOBIERNO"},
-            {"id": "MORAL", "label": "MORAL"}
+            { "id": "FISICA", "label": "FISICA" },
+            { "id": "GOBIERNO", "label": "GOBIERNO" },
+            { "id": "MORAL", "label": "MORAL" }
           ]
         },
+
         {
-          "id": "DOCUMENTOS",
-          "label": "¿Documentos completos?",
-          "type": "multiple-selection"
-        },
-        {
-          "id": "FormaManejo",
-          "label": "Forma manejo",
-          "type": "combo-selection",
+          "id": "ESTATUS",
+          "type": "simple-selection",
           "opts": [
-            {"id": "DISCRESTR", "label":"DISCRECIONAL RESTRINGIDO"},
-            {"id": "NODISCR", "label": "NO DISCRECIONAL"},
-            {"id": "SINMANEJO", "label": "SIN MANEJO DE INVERSION"}
+            { "id": "AUTORIZAR", "label": "AUTORIZAR" },
+            { "id": "RECHAZAR", "label": "RECHAZAR" },
+            { "id": "CANCELAR", "label": "CANCELAR" }
           ]
+        },
+        {
+          "id": "ESTATUS2",
+          "type": "simple-selection",
+          "opts": [
+            { "id": "AUTORIZAR", "label": "AUTORIZAR" },
+            { "id": "RECHAZAR", "label": "RECHAZAR" },
+            { "id": "CANCELAR", "label": "CANCELAR" }
+          ]
+        },
+        {
+          "id": "GARANTIA",
+          "label": "APLICA GARANTÍA",
+          "type": "multiple-selection"
         }
       ],
       "rows": [
         {
-          "id": "facebook",
-          "data": ["Facebook", 40, 50, "Texto de prueba", "50000"]
+          "id": "wCjazccf",
+          "data": [
+            "YYYYYYYY",
+            "Impedit incidunt consectetur voluptates assumenda qui quo sapiente.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "5,793",
+            "YYYYYYYY"
+          ]
         },
         {
-          "id": "twitter",
-          "data": ["Twitter", 30, 70, "Texto de prueba", "50000"]
+          "id": "MBNcoJLk",
+          "data": [
+            "YYYYYYYY",
+            "Aspernatur enim soluta eligendi est qui et aut.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "8,215",
+            "YYYYYYYY"
+          ]
         },
         {
-          "id": "instagram",
-          "data": ["Instagram", 20, 90, "Texto de prueba", "50000"]
+          "id": "XSdtFB71",
+          "data": [
+            "YYYYYYYY",
+            "Et dolores et quaerat aut voluptatem perferendis.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "3,121",
+            "YYYYYYYY"
+          ]
         },
         {
-          "id": "whatsapp",
-          "data": ["WhatsApp", 10, 90, "Texto de prueba", "50000"]
+          "id": "Z5r2FIxj",
+          "data": [
+            "YYYYYYYY",
+            "Est et explicabo.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "8,055",
+            "YYYYYYYY"
+          ]
+        },
+        {
+          "id": "MLuh7A0h",
+          "data": [
+            "YYYYYYYY",
+            "Cumque ut eum numquam.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "1,890",
+            "YYYYYYYY"
+          ]
+        },
+        {
+          "id": "dRYgsc7V",
+          "data": [
+            "YYYYYYYY",
+            "Eaque qui et magni mollitia.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "6,368",
+            "YYYYYYYY"
+          ]
+        },
+        {
+          "id": "j2S21bxP",
+          "data": [
+            "YYYYYYYY",
+            "Est aspernatur odit ea tempore magni est cupiditate.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "1,556",
+            "YYYYYYYY"
+          ]
+        },
+        {
+          "id": "Z0jFxjQk",
+          "data": [
+            "YYYYYYYY",
+            "Eveniet aut nihil quaerat.",
+            "YYYYYYYY",
+            "YYYYYYYY",
+            "4,858",
+            "YYYYYYYY"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "group": "Generales",
+          "actions": [
+            {
+              "label": "Pedidos",
+              "link": "/pedido-admin/"
+            },
+            {
+              "label": "Facturas",
+              "link": "/facturas-admin/"
+            }
+          ]
+        },
+        {
+          "group": "Cargos",
+          "actions": [
+            {
+              "label": "Generar cargos",
+              "link": "/generar-cargos/"
+            },
+            {
+              "label": "Agregar cargos manuales",
+              "link": "/agregar-cargos/"
+            }
+          ]
         }
       ]
     }

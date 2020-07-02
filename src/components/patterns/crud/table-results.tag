@@ -7,13 +7,18 @@
         </th>
         <th if={opts.action=="select-one" }>
         </th>
-        <th each={header in headers} if={ header.type != "simple-selection" && header.type != "multiple-selection" && header.type != "combo-selection" }> { header.label } </th>
-        <th each={header in headers} if={ header.type == "simple-selection"  && header.id }> { header.label } </th>
-        <th each={header in headers} if={ header.type == "multiple-selection" && header.id }>
-          { header.label } <input type="checkbox" name={ header.id + "-parent-check" } onclick={ checkAll }>
+        <th each={header in headers} if={ header.type != "simple-selection" && header.type != "multiple-selection" && header.type != "combo-selection" }> 
+          { header.label } 
         </th>
-        <th each={header in headers} if={ header.type == "combo-selection" && header.id }>
+        <th each={header in simpleSelectionHeaders} if={ simpleSelectionHeaders } style="text-align:center">
+          { header.label } <br/><input type="radio" class={header.parentId + header.id + "-parent-simple-selection"} name={ header.parentId } onclick={ radioSelectAll }>
+        </th>
+        <th each={header in headers} if={ header.type == "multiple-selection" && header.id } style="text-align:center">
+          { header.label } <br/><input type="checkbox" name={ header.id + "-parent-check" } onclick={ checkAll }>
+        </th>
+        <th each={header in headers} if={ header.type == "combo-selection" && header.id } style="text-align:center">
           { header.label }
+          <br/>
           <select name={ header.id + "-parent-select" } class="form-control" onchange={ selectAll }>
             <option disabled=true selected=true> ---Seleccione una opción--- </option>
             <option each={opt in header.opts} id={ opt.id }> { opt.label } </option>
@@ -37,10 +42,10 @@
           </virtual>
           <img if={d.toString().startsWith("http")} src="{d}"  width="{opts.imgwidth}" height="{opts.imgheight}" />
         </td>
-        <td class="a-center" each={header in headers} if={ header.type=="simple-selection" && header.id }>
-          <input type="radio" class="flat" style="position: absolute;" name={ header.id + "-table-radio-child" }>
+        <td class="a-center" each={header in simpleSelectionHeaders} if={ simpleSelectionHeaders } style="text-align:center">
+          <input type="radio" name={ header.parentId + "-" + j } class={header.parentId + header.id + "-child-simple-selection"}>
         </td>
-        <td class="a-center" each={header in headers} if={ header.type=="multiple-selection" && header.id }>
+        <td class="a-center" each={header in headers} if={ header.type=="multiple-selection" && header.id } style="text-align:center">
           <input type="checkbox" name={ header.id + "-child-check" }>
         </td>
         <td class="a-center" each={header in headers} if={ header.type=="combo-selection" && header.id }>
@@ -55,11 +60,11 @@
         </td>
         <td if={!opts.modal}>
           <div style="position:relative">
-            <button each={row.actions} data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button" aria-expanded="false">
+            <button each={actions} data-toggle="dropdown" class="btn btn-default btn-sm dropdown-toggle" type="button" aria-expanded="false">
               <i class="fa fa-sitemap"></i> {group}
               <span class="caret"></span>
             </button>
-            <ul each={row.actions} role="menu" class="dropdown-menu">
+            <ul each={actions} role="menu" class="dropdown-menu">
               <li each={actions}>
                 <a href={link}>
                   <i class="fa fa-chain"></i> {label}
@@ -75,6 +80,38 @@
     next="Siguiente" />
 
   <script>
+    if (this.opts.imgwidth==null)
+        this.opts.imgwidth =15;
+    if (this.opts.imgheight==null)
+        this.opts.imgheight=15;
+    this.headers = JSON.parse(localStorage.getItem('header_' + this.opts.id));
+    this.rows = JSON.parse(localStorage.getItem('rows_' + this.opts.id));
+    
+    var simpleSelectionOptions = [];
+
+    this.headers.forEach(function(header){
+      if(header.type && header.type=="simple-selection"){
+        if(header.opts){
+          header.opts.forEach(function(opt){
+            opt.parentId = header.id; 
+            simpleSelectionOptions.push(opt);
+          });
+        }
+      }
+    });
+
+    this.simpleSelectionHeaders = simpleSelectionOptions;
+
+    this.radioSelectAll = function(e){
+      var childRadioClassName = e.target.className.split('-')[0] + "-child-simple-selection"
+      var childRadios = document.getElementsByClassName(childRadioClassName)
+
+      if(e.target.checked){
+        for (let element of childRadios){
+          element.checked = true
+        }
+      }
+    }
 
     this.checkAll = function (e){
       var childCheckName = e.target.name.split('-')[0] + "-child-check"
@@ -100,13 +137,6 @@
         }
       })
     }
-
-    if (this.opts.imgwidth==null)
-        this.opts.imgwidth =15;
-    if (this.opts.imgheight==null)
-        this.opts.imgheight=15;
-    this.headers = JSON.parse(localStorage.getItem('header_' + this.opts.id));
-    this.rows = JSON.parse(localStorage.getItem('rows_' + this.opts.id));
 
     for (var i = 0; i < this.rows.length; i++) {
       for (var j = 0; j < this.rows[i].data.length; j++) {
