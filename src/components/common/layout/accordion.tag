@@ -1,18 +1,41 @@
-<accordiongroup>  
-	<div class="accordion" id={ opts.id } role="tablist" aria-multiselectable="true">
-		<yield/> 
-	</div>
-</accordiongroup>
-
 <accordion>
-	<div class="panel">
-		<a id={ 'heading' + opts.id } class="panel-heading collapsed" role="tab" data-toggle="collapse" data-parent={ '#' + opts.parent } href={ '#child' + opts.id } aria-expanded="false" aria-controls={ opts.id }>
-		  <h4 class="panel-title"> {opts.title} </h4>
-		</a>
-		<div id={ 'child' + opts.id } class="panel-collapse collapse" role="tabpanel" aria-labelledby={ 'heading' + opts.id }>
-			<div class="panel-body">
-				<yield/>
-			</div>
-		</div>
-	</div>
+  <div class="accordion-container">
+    <div id={ opts.id + "-accordion" } >
+      <div class="x_panel">
+        <div class="x_title card" id={ opts.id + "-heading" }>
+          <h2>{ opts.title }</h2>
+          <a data-toggle="collapse" data-target={ "#" + opts.id + "-collapse" } aria-expanded="true" aria-controls="collapseOne" onclick={ changeIcon }>
+            <i class="fa fa-chevron-up"/>
+          </a>
+          <br/>
+        </div>
+
+        <div id={ opts.id + "-collapse" } class="x_content collapse show" aria-labelledby={ opts.id + "-heading" } data-parent={ "#" + opts.id + "-accordion" }>
+          <div class="card-body">
+            <yield/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    this.changeIcon = function(e){
+      var isCollapsed = e.target.parentNode.ariaExpanded
+      var icon =  e.target
+
+      if (isCollapsed == "true" ){
+        icon.className = "fa fa-chevron-down"
+      } else {
+        icon.className = "fa fa-chevron-up"
+      }
+    };
+  </script>
+
+  <style>
+    .accordion-container a{
+      float: right;
+    }
+  </style>
+
 </accordion>

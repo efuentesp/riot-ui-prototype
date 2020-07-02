@@ -13,8 +13,7 @@
 			{ type: "danger",      pbType: { class: "progress-bar progress-bar-danger progress-bar-striped active" } },
 			{ type: "default",     pbType: { class: "progress-bar progress-bar-striped active" } }
 		]
-		
-		console.log(opts.type);
+	
 		
 		this.pbClass = function(){
 			switch (opts.type.toLowerCase()) {
