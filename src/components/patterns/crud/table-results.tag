@@ -2,8 +2,8 @@
   <table class="table table-striped bulk_action">
     <thead>
       <tr class="headings">
-        <th if={opts.action=="select-multi" }>
-          <input type="checkbox" id="check-all" class="flat">
+        <th if={opts.action=="select-multi" } style="text-align:center">
+          <input type="checkbox" name="tablerecords-parent-check" onclick={ checkAll }>
         </th>
         <th if={opts.action=="select-one" }>
         </th>
@@ -30,11 +30,11 @@
     </thead>
     <tbody>
       <tr each={row, j in rows} class="even pointer">
-        <td if={opts.action=="select-one" } class="a-center ">
-          <input type="radio" class="flat" name="table_records" style="position: absolute;">
+        <td if={opts.action=="select-one" } style="text-align:center">
+          <input type="radio" name="tablerecords">
         </td>
-        <td if={opts.action=="select-multi" } class="a-center ">
-          <input type="checkbox" class="flat" name="table_records">
+        <td if={opts.action=="select-multi" } style="text-align:center">
+          <input type="checkbox" name="tablerecords-child-check">
         </td>
         <td each={d , i in row.data }>
           <virtual if={!d.toString().startsWith("http")}>
