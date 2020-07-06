@@ -50,6 +50,7 @@ import './components/common/form/bar-graph.tag'
 import './components/common/form/counters.tag'
 import './components/common/form/alert.tag'
 import './components/common/form/checkbox.tag'
+import './components/common/form/message.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
 
