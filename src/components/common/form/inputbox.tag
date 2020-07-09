@@ -1,15 +1,28 @@
 <inputbox>
-
-	<label if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
-    <label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
-	<div class={ iBoxDiv() } id={opts.id}0>
-		<span class= { iboxClass() }>
-			<i class={ iboxIcon() }></i>
-		</span>
-		<input type={opts.type} id={opts.id} class="form-control" name="form-inputbox" placeholder={opts.placeholder} value={opts.value} >
+	<div class="form-group" if={ !opts.orientation || opts.orientation == "vertical" }>
+		<label if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+		<label if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
+		<div class={ iBoxDiv() } id={opts.id}0>
+			<span class= { iboxClass() }>
+				<i class={ iboxIcon() }></i>
+			</span>
+			<input type={opts.type} id={opts.id} class="form-control" name="form-inputbox" placeholder={opts.placeholder} value={opts.value} >
+		</div>
+		<span id={opts.id}2 class="help-block"></span>
 	</div>
-	<span id={opts.id}2 class="help-block"></span>
-
+	<div class="form-group row" if={ opts.orientation == "horizontal" }>
+		<label class="control-label col-md-3 col-sm-3" if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+		<label class="control-label col-md-3 col-sm-3" if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
+		<div class="col-md-9 col-sm-9">
+			<div class={ iBoxDiv() } id={opts.id}0>
+				<span class= { iboxClass() }>
+					<i class={ iboxIcon() }></i>
+				</span>
+				<input type={opts.type} id={opts.id} class="form-control" name="form-inputbox" placeholder={opts.placeholder} value={opts.value} >
+			</div>
+			<span id={opts.id}2 class="help-block"></span>
+		</div>
+	</div>
   <script>
 
 	var inputboxes = [
