@@ -11,9 +11,9 @@
 		<span id={opts.id}2 class="help-block"></span>
 	</div>
 	<div class="form-group row" if={ opts.orientation == "horizontal" }>
-		<label class="control-label col-md-3 col-sm-3" if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
-		<label class="control-label col-md-3 col-sm-3" if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
-		<div class="col-md-9 col-sm-9">
+		<label class="control-label col-md-2 col-sm-2" if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+		<label class="control-label col-md-2 col-sm-2" if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
+		<div class="col-md-10 col-sm-10">
 			<div class={ iBoxDiv() } id={opts.id}0>
 				<span class= { iboxClass() }>
 					<i class={ iboxIcon() }></i>
