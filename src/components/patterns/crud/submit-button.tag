@@ -1,7 +1,9 @@
 <submit-button>
-  <a onclick={ redirectPage } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
+  <a if={ opts.action != "return" } onclick={ redirectPage } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
+  <a if={ opts.action == "return" }  onclick={ return } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
+
 	<script>
-		if(opts.to){
+		if(opts.to && opts.action != "return"){
 			this.goToRef = function(){
 				toRef(opts.to);
 			};
@@ -10,6 +12,10 @@
 				window.location.href = "./#!" + opts.to
 				window.location.reload()
 			}
+		}
+
+		this.return = function(){
+			window.history.back();
 		}
 		
 		this.on('mount', function(){

@@ -1,10 +1,10 @@
 <clienteAdministrar>
   <page id="mantenimientoClientes" title="Mantenimiento de Clientes" title="Mantenimiento de Clientes" description="Administración de Clientes">
       <searchpanel add="/cliente-agregar/">
-         <searchcriteria viewsearch="true" viewadd="true" exportpdf="true" exportxls="true">
+         <searchcriteria viewadd="true" exportpdf="true" exportxls="true">
              <search id="criterioBusqueda" type="text" caption="Buscar" placeholder="Criterio de Búsqueda"> </search>
          </searchcriteria>
-         <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/" imgwidth="15">
+         <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/" imgwidth="15" select="true" save="true">
          </searchresults>
       </searchpanel>
 			<select-auto id="ClienteDir" type="select" placeholder="ClienteDir" data="mantenimientoClientesSimpleAdmin" required=true fieldindex="2"/>
