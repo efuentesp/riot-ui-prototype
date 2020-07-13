@@ -12,14 +12,22 @@
 	 </formbox>
 
 	 <panel if={opts.viewsearch=="true"} label="Resultados de búsqueda">
-		 <div if={this.parent.parent.opts.add && this.parent.opts.viewadd=="true"}>
-		 	 <submit-button to={ this.parent.parent.opts.add } action="add"></submit-button>
-		 </div>
+		<div class="nav navbar-left">
+			<submit-button if={this.parent.parent.opts.add && this.parent.opts.viewadd=="true"} to={ this.parent.parent.opts.add } action="add"></submit-button>
+		</div>
+		<div class="nav navbar-right">
+			<submit-button if={this.parent.opts.exportpdf=="true"}  action="custom" icon="fa fa-file-pdf-o"/>
+			<submit-button if={this.parent.opts.exportxls=="true"} action="custom" icon="fa fa-file-excel-o"/>
+		<div>
 	 </panel>
 	 <panel if={opts.viewsearch!="true"} label="">
-		 <div if={this.parent.parent.opts.add && this.parent.opts.viewadd=="true"}>
-			  <submit-button to={ this.parent.parent.opts.add } action="add"></submit-button>
-		 </div>
+	 	<div class="nav navbar-left">
+			<submit-button if={this.parent.parent.opts.add && this.parent.opts.viewadd=="true"} to={ this.parent.parent.opts.add } action="add"></submit-button>
+		</div>
+		<div class="nav navbar-right">
+			<submit-button if={this.parent.opts.exportpdf=="true"}  action="custom" icon="fa fa-file-pdf-o"/>
+			<submit-button if={this.parent.opts.exportxls=="true"} action="custom" icon="fa fa-file-excel-o"/>
+		<div>
 	 </panel>
 </searchcriteria>
 
