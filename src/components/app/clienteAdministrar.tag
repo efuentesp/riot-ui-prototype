@@ -1,7 +1,7 @@
 <clienteAdministrar>
   <page id="mantenimientoClientes" title="Mantenimiento de Clientes" title="Mantenimiento de Clientes" description="Administración de Clientes">
       <searchpanel add="/cliente-agregar/">
-         <searchcriteria>
+         <searchcriteria viewsearch="true" viewadd="true" exportpdf="true" exportxls="true">
              <search id="criterioBusqueda" type="text" caption="Buscar" placeholder="Criterio de Búsqueda"> </search>
          </searchcriteria>
          <searchresults pagination="true" id="mantenimientoClientes" edit="/cliente-editar/" delete="/cliente-eliminar/" imgwidth="15">
@@ -17,7 +17,7 @@
   
       <search-box id="searchboxsample2" link="examplemodal2" caption="Cliente2" placeholder="Cliente One"/> 
       <modal-box id="examplemodal2"  data="mantenimientoClientes" title="Seleccionar Cliente Modal Select-One" action="select-one" pagination="true" link="searchboxsample2"/>
-      
+
 	  <date-time-picker  id="datetime1" label="Fecha1"/>
 	  <checkbox label="true" id="id1" checked="true"/>
 	  <checkbox label="false" id="id2" checked="false"/>
