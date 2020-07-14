@@ -34,7 +34,7 @@
 
 
 <searchresults>
-	<table-results pagination={opts.pagination} id={opts.id} edit={opts.edit} delete={opts.delete} imgwidth={opts.imgwidth} imgheight={opts.imgheight}/>
+	<table-results pagination={opts.pagination} id={opts.id} edit={opts.edit} delete={opts.delete} imgwidth={opts.imgwidth} imgheight={opts.imgheight} action={ opts.action } />
 	<submit-button if={ opts.save=="true" }  action="update"/>
 	<submit-button if={ opts.select=="true" } action="custom" icon="fa fa-check-square-o" caption="Seleccionar"/>
 	<br/><br/>
