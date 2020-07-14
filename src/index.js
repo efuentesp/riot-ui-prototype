@@ -5,6 +5,15 @@ if (module.hot) {
 }
 
 import riot from 'riot'
+const $ = require('jquery');
+window.$ = $;
+window.jQuery = $;
+require('popper.js')
+require('gentelella/vendors/bootstrap/dist/js/bootstrap.min.js')
+require('gentelella/vendors/nprogress/nprogress.js')
+require('gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js')
+require('gentelella/vendors/iCheck/icheck.js')
+require('gentelella/vendors/fastclick/lib/fastclick.js')
 
 // Hoja de estilos
 import './styles/index.scss'

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,30 +9,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aplicación Demo</title>
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css"
+    rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
   <link href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/style.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
-  
-  
+
+
 </head>
+
 <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <app></app>
-        <routehandler></routehandler>
-      </div>
+  <div class="container body">
+    <div class="main_container">
+      <app></app>
+      <routehandler></routehandler>
     </div>
+  </div>
 </body>
+
 </html>
-<script src="https://colorlib.com/polygon/vendors/jquery/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://colorlib.com/polygon/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://colorlib.com/polygon/vendors/fastclick/lib/fastclick.js"></script>
-<script src="https://colorlib.com/polygon/vendors/nprogress/nprogress.js"></script>
-<script src="https://colorlib.com/polygon/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<script src="https://colorlib.com/polygon/vendors/iCheck/icheck.min.js"></script>
 <script src="https://colorlib.com/polygon/vendors/moment/min/moment.min.js"></script>
 <script src="https://colorlib.com/polygon/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="https://colorlib.com/polygon/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
@@ -51,22 +48,22 @@
 <script src="https://colorlib.com/polygon/vendors/fullcalendar/dist/fullcalendar.min.js"></script>
 <script src="https://colorlib.com/polygon/build/js/custom.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-<script type="module" src="https://unpkg.com/softtek-web-components@0.0.1/dist/softtek-web-components/softtek-web-components.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/softtek-web-components@0.0.1/dist/softtek-web-components/softtek-web-components.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+<script type="module"
+  src="https://unpkg.com/softtek-web-components@0.0.1/dist/softtek-web-components/softtek-web-components.esm.js"></script>
+<script nomodule=""
+  src="https://unpkg.com/softtek-web-components@0.0.1/dist/softtek-web-components/softtek-web-components.js"></script>
 
 
 <script>
   //ocultamos a partir del elemento 1 porque ahi empiezan los tags del contenido
   //dentro del div contentid
-function toRef(idto){
-      var innerchildren = document.getElementById("contentid").children;
-     for (var i = 1; i < innerchildren.length; i++) {
-               document.getElementById("contentid").children[i].style.display="none";
-      }
-      document.getElementById("contentid").children[idto].style.display="block";
-}
+  function toRef(idto) {
+    var innerchildren = document.getElementById("contentid").children;
+    for (var i = 1; i < innerchildren.length; i++) {
+      document.getElementById("contentid").children[i].style.display = "none";
+    }
+    document.getElementById("contentid").children[idto].style.display = "block";
+  }
 </script>
-
-
-
