@@ -1,9 +1,11 @@
 <submit-button>
-  <a if={ opts.action != "return" } onclick={ redirectPage } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
-  <a if={ opts.action == "return" }  onclick={ return } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
+  <a if={ opts.action != "return" && opts.action != "create" && opts.action != "update" && opts.action != "delete"  } 
+  onclick={ redirectPage } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
+  <a if={ opts.action == "return" || opts.action == "create" || opts.action == "update" || opts.action == "delete"  }  
+  onclick={ return } class={ btnType() }><i class={ btnIcon() }></i> { btnLabel() }</a>
 
 	<script>
-		if(opts.to && opts.action != "return"){
+		if(opts.to && (opts.action != "return" && opts.action != "create" && opts.action != "update" && opts.action != "delete")){
 			this.goToRef = function(){
 				toRef(opts.to);
 			};
@@ -19,7 +21,7 @@
 		}
 		
 		this.on('mount', function(){
-			if (opts.alert && opts.id){
+			if (opts.alert && opts.id && opts.action != "return" && opts.action != "create" && opts.action && "update" && opts.action != "delete"){
 				var btn = document.getElementById(opts.id)
 				var alertComponents = this.parent.tags.alert
 				
