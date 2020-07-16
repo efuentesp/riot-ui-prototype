@@ -26,10 +26,14 @@
              
              <select-box if={header.type=="select" && header.required=="true"} id={this.opts.id+index} type="select"  required="true" data={opts.id}  fieldindex="{index}" required="true" />
              <select-box if={header.type=="select" && (header.required=="false" || header.required==null)} id={this.opts.id+index} type="select" data={opts.id}  fieldindex="{index}" />
-             
+
+
              <select-auto if={header.type=="auto" && header.required=="true"} id={this.opts.id+index} data={opts.id}  fieldindex="{index}" required="true" />
              <select-auto if={header.type=="auto" && (header.required=="false" || header.required==null)} id={this.opts.id+index} data={opts.id}  fieldindex="{index}" />
              
+             <checkbox if={header.type=="boolean" && header.required=="true"} required="true" id={this.opts.id+index} data={opts.id}  fieldindex="{index}" />
+             <checkbox if={header.type=="boolean" && header.required=="false"} required="false" id={this.opts.id+index} data={opts.id}  fieldindex="{index}" />
+
              <outputtext if={header.type=="output"} id={this.opts.id+index}  label={header.label}/>
              </th>
            <th>

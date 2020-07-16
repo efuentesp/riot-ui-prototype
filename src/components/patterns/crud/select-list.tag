@@ -3,55 +3,58 @@
   <div class="col-md-5 col-xs-5">
    <br/>
    <span class="section">{ opts.fromtitle }</span>
-   <table id="table_source" class="table table-striped table-bordered bulk_action">
-       <thead>
-         <tr>
-           <th></th>
-           <th each={headers}> {label} </th>
-         </tr>
-       </thead>
-       <tbody>
-       <tr class="" each={row, index in rows} id={ index + 'sr' }> 
-           <td>
-			 <input type="checkbox" class="flat" name="ts-ckeck"> { opts.label }
-           </td>
-           <td each={d , i in row.data }>
-            <virtual if={!d.toString().startsWith("http")}>
-             {d}
-            </virtual>
-            <img if={d.toString().startsWith("http")} src="{d}" width="{opts.imgwidth}" height="{opts.imgheight}" /> 
-           </td>
-       </tr>
-       </tbody>
-   </table>
+   <div class="table-responsive">
+    <table id="table_source" class="table table-striped table-bordered bulk_action">
+        <thead>
+          <tr>
+            <th></th>
+            <th each={headers}> {label} </th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="" each={row, index in rows} id={ index + 'sr' }> 
+            <td>
+        <input type="checkbox" class="flat" name="ts-ckeck"> { opts.label }
+            </td>
+            <td each={d , i in row.data }>
+              <virtual if={!d.toString().startsWith("http")}>
+              {d}
+              </virtual>
+              <img if={d.toString().startsWith("http")} src="{d}" width="{opts.imgwidth}" height="{opts.imgheight}" /> 
+            </td>
+        </tr>
+        </tbody>
+    </table>
+   </div>
    <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
   </div>
   
-  <div class="col-md-1 col-xs-1">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <button id={ "right-" + opts.id } onclick={addRightRow} class="btn btn-default btn-sm">
-                <i class="fa fa-arrow-right"></i>
-    </button>
-    <button id={ "left-" + opts.id } onclick={addLeftRow} class="btn btn-default btn-sm">
-                <i class="fa fa-arrow-left"></i>
-    </button>
+  <div class="col-md-2 col-xs-2">
+    <div class="text-center">
+      <br/><br/><br/><br/><br/><br/>
+      <button id={ "right-" + opts.id } onclick={addRightRow} class="btn btn-default btn-sm">
+                  <i class="fa fa-arrow-right"></i>
+      </button><br/>
+      <button id={ "left-" + opts.id } onclick={addLeftRow} class="btn btn-default btn-sm">
+                  <i class="fa fa-arrow-left"></i>
+      </button>
+    </div>
   </div>
   <div class="col-md-5 col-xs-5">
    <br/>
    <span class="section">{ opts.totitle }</span>
-   <table id="table_target" class="table table-striped table-bordered bulk_action">
-    <thead>
-        <tr>
-           <th></th>
-           <th each={headers}> {label} </th>
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-    </table>
+   <div class="table-responsive">
+    <table id="table_target" class="table table-striped table-bordered bulk_action">
+      <thead>
+          <tr>
+            <th></th>
+            <th each={headers}> {label} </th>
+          </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      </table>
+    </div>
     <pagination-bar if={opts.pagination=="true"} label="Total de registros encontrados: {this.rows.length}" previous="Anterior" next="Siguiente"/>
    </div>
  </div>
