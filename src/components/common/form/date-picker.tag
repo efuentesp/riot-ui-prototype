@@ -10,7 +10,6 @@
 					<span></span>
 				</span>
 			</div>
-			</div>
 		</div>
 	</div>
 	<div if={ !opts.orientation || opts.orientation == "vertical" }>
