@@ -1,21 +1,34 @@
 <attach-photo>
 	<!-- File input field -->
+	<div class="form-group" if={ !opts.orientation || opts.orientation == "vertical" }>
+		<label if={ opts.required == 'true'}>{ opts.label }<font color="red"> *</font></label>
+		<label if={ opts.required == 'false' || ( ! opts.required && opts.label ) }>{ opts.label }</label>
 
-	<label if={ opts.required == 'true'}>{ opts.label}<font color="red"> *</font></label>
-	<label if={ opts.required == 'false'}>{ opts.label }</label>
-
-	<div class="input-group" id={ opts.id }>
-		<span class="input-group-btn">
-			<span class="btn btn-default btn-file">
-				<i class="fa fa-file-image-o"></i> Buscar... <input type="file" id={ opts.id }/>
+		<div class="input-group" id={ opts.id }>
+			<span class="input-group-btn">
+				<span class="btn btn-default btn-file">
+					<i class="fa fa-file-image-o"></i> Buscar... <input type="file" id={ opts.id }/>
+				</span>
 			</span>
-		</span>
-		<input type="text" id={ "url-input-" + opts.id } class="form-control" readonly>
+			<input type="text" id={ "url-input-" + opts.id } class="form-control" readonly>
+		</div>
+	</div>
+	<div class="form-group row" if={ opts.orientation == "horizontal" }>
+		<label class="control-label col-md-2 col-sm-2" if={ opts.required == 'true'}>{ opts.label}<font color="red"> *</font></label>
+		<label class="control-label col-md-2 col-sm-2" if={ opts.required == 'false' || ( ! opts.required && opts.label ) }>{ opts.label }</label>
+
+		<div class="input-group col-md-10 col-sm-10" id={ opts.id }>
+			<span class="input-group-btn">
+				<span class="btn btn-default btn-file">
+					<i class="fa fa-file-image-o"></i> Buscar... <input type="file" id={ opts.id }/>
+				</span>
+			</span>
+			<input type="text" id={ "url-input-" + opts.id } class="form-control" readonly>
+		</div>
 	</div>
 	<span id={ "error-msg-" + opts.id } class="help-block"></span>
-
 	<div class="form-group" id={ "image-preview-" + opts.id }></div>
-
+	
 	<script>
 		this.on('mount', function(){
 

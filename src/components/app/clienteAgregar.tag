@@ -8,7 +8,7 @@
 					<inputbox id="nombreAgregar" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=25/>
 					<inputbox id="phone-number" type="phone" value="5517005656" label="Teléfono" required=true disabled=false />
 					<inputbox id="observacionesAgregar" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
-					<attach-photo id="foto" label="Foto" height="200" width="400" maxsizemb="7" filetypes="jpg, png, bmp" />
+					<attach-photo id="foto" label="Foto" height="200" width="400" maxsizemb="7" filetypes="jpg, png, bmp" orientation="horizontal" />
 					<attach-photo id="factura" label="Factura (Imagen)" height="200" width="400" maxsizemb="8" filetypes="jpg, png, bmp" />
 
 				</column>
@@ -124,7 +124,7 @@
 					<inputbox id="nombreAgregar" type="text" label="Nombre(s)" value="Héctor Javier" placeholder="Ingresa el nombre del Cliente" required=true disabled=false minsize=3 maxsize=25/>
 					<inputbox id="phone-number" type="phone" value="5517005656" label="Teléfono" required=true disabled=false />
 					<inputbox id="observacionesAgregar" type="textarea" lines=5 label="Observaciones" value="Estas son mis observaciones..." placeholder="Ingresa tus comentarios" required=true disabled=false minsize=3 maxsize=500 />
-					<attach-photo id="foto" label="Foto" height="200" width="400" maxsizemb="7" filetypes="jpg, png, bmp" />
+					<attach-photo id="foto" label="Foto" height="200" width="400" maxsizemb="7" filetypes="jpg, png, bmp" orientation="horizontal" />
 					<attach-photo id="factura" label="Factura (Imagen)" height="200" width="400" maxsizemb="8" filetypes="jpg, png, bmp" />
 
 				</column>
