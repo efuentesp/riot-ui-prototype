@@ -4,29 +4,25 @@
 		<div class="form-group row">
 			<label class="control-label col-md-2 col-sm-2"  if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
 			<label class="control-label col-md-2 col-sm-2"  if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
-			<fieldset>
-				<div class="xdisplay_inputx form-group has-feedback col-md-10 col-sm-10" id={ opts.id } >
-					<input type="text" placeholder={opts.placeholder} id={ "i-date-" + opts.id } class="form-control has-feedback-left" />
-					<span class="fa fa-calendar-o form-control-feedback left horizontal">
-						<span></span>
-					</span>
-				</div>
-			</fieldset>
+			<div class="xdisplay_inputx form-group has-feedback col-md-10 col-sm-10" id={ opts.id } >
+				<input type="text" placeholder={opts.placeholder} id={ "i-date-" + opts.id } class="form-control has-feedback-left" />
+				<span class="fa fa-calendar-o form-control-feedback left horizontal">
+					<span></span>
+				</span>
+			</div>
 			</div>
 		</div>
 	</div>
 	<div if={ !opts.orientation || opts.orientation == "vertical" }>
 		<div class="form-group">
-			<label class="control-label"  if={ opts.required == 'true'}   for={opts.type}>{ opts.label}<font color="red"> *</font></label>
+			<label class="control-label"  if={ opts.required == 'true'}   for={opts.type}>{ opts.label }<font color="red"> *</font></label>
 			<label class="control-label"  if={ opts.required == 'false' || ( ! opts.required && opts.label ) } for={opts.type}>{ opts.label }</label>
-			<fieldset>
 				<div class="xdisplay_inputx form-group has-feedback" id={ opts.id } >
 					<input type="text" placeholder={opts.placeholder} id={ "i-date-" + opts.id } class="form-control has-feedback-left" />
 					<span class="fa fa-calendar-o form-control-feedback left vertical">
 						<span></span>
 					</span>
 				</div>
-			</fieldset>
 		</div>
 	</div>
 	<script>

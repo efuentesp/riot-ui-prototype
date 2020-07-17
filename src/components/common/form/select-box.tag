@@ -22,7 +22,8 @@
       <div if={ opts.type == "select" } {id}>
         <select class="form-control" >
           <option disabled selected>--Seleccione una opción--</option>
-          <option each={ opt in this.tags["option-box"] } id={ opt.opts.id } name={ "selectbox-" + opts.id }>{ opt.opts.label }</option>
+          <option if={ !opts.data }  each={ opt in this.tags["option-box"] } id={ opt.opts.id } name={ "selectbox-" + opts.id }>{ opt.opts.label }</option>
+          <option if={ opts.data }  each={ d, i in rows } id={ i } name={ "selectbox-" + i }>{ d }</option>
         </select>
       </div>
     </div>
@@ -50,10 +51,27 @@
       <div class="col-md-10 col-sm-10 " if={ opts.type == "select" } {id}>
         <select class="form-control" >
           <option disabled selected>--Seleccione una opción--</option>
-          <option each={ opt in this.tags["option-box"] } id={ opt.opts.id } name={ "selectbox-" + opts.id }>{ opt.opts.label }</option>
+          <option if={ !opts.data }  each={ opt in this.tags["option-box"] } id={ opt.opts.id } name={ "selectbox-" + opts.id }>{ opt.opts.label }</option>
+          <option if={ opts.data }  each={ d, i in rows } id={ i } name={ "selectbox-" + i }>{ d }</option>
         </select>
       </div>
     </div>
+
+    <script>
+      if (this.opts.data!=null) {
+        if (this.opts.fieldindex=='undefined')
+          this.opts.fiedlindex=0;
+        this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.data));
+        if (this.opts.data!=null) {
+          this.headers    = JSON.parse(localStorage.getItem('header_'+ this.opts.data));
+          for (var i=0; i < this.headers.length; i++)
+            {
+              if (this.headers[i].data!='undefined' && i==this.opts.fieldindex)
+                  this.rows= this.headers[i].data; 
+            }
+        } 
+      }
+    </script>
 
 </select-box>
 
