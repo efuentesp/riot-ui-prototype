@@ -19,7 +19,8 @@ require('gentelella/vendors/fastclick/lib/fastclick.js')
 import './styles/index.scss'
 
 // Applicación
-import './components/app/app.tag'
+import './components/app/appCruds.tag'
+import './components/app/appScreens.tag'
 
 // Componentes comunes
 import './components/common/layout/page.tag'
@@ -61,6 +62,7 @@ import './components/common/form/checkbox.tag'
 import './components/common/form/message.tag'
 import './components/common/grid/row.tag'
 import './components/common/grid/column.tag'
+import './components/common/grid/mainApp.tag'
 
 // Patrones Funcionales
 import './components/patterns/crud/searchpanel.tag'
