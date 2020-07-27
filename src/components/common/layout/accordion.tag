@@ -1,11 +1,15 @@
 <accordion>
-  <div class="accordion-container">
     <div class="x_panel">
         <div class="x_title card" id={ opts.id + "-heading" }>
           <h2>{ opts.title }</h2>
-          <a data-toggle="collapse" data-target={ "#" + opts.id + "-collapse" } aria-expanded="false" aria-controls={ opts.id + "-collapse" } onclick={ changeIcon }>
-            <i class="fa fa-chevron-down"/>
-          </a>
+          <ul class="nav navbar-right panel_toolbox">
+           <li>
+            <a data-toggle="collapse" data-target={ "#" + opts.id + "-collapse" } aria-expanded="false" aria-controls={ opts.id + "-collapse" } onclick={ changeIcon }>
+             <i class="fa fa-chevron-down"/>
+            </a>
+           </li>
+          </ul>
+          <br/>
           <br/>
         </div>
       
@@ -15,7 +19,6 @@
             </div>
         </div>
     </div>
-  </div>
 
   <script>
     this.changeIcon = function(e){
